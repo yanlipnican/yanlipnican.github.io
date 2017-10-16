@@ -7,6 +7,12 @@ disqusShortname = "blog-lipnican"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
+[[menu.main]]
+    name = "About me"
+    weight = -110
+    identifier = "about"
+    url = "/about"
+
 [params]
-  description = "My thoughts about stuff. Usualy programming in Javascript or Go. <a href=\"https://github.com/yanlipnican\">@yanlipnican</a>"
-  author = "Jan Lipnican"
+  description = "by Jan Lipnican"
+  

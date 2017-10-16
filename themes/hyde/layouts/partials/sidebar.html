@@ -1,0 +1,30 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="{{ .Site.BaseURL }}"><h1>{{ .Site.Title }}</h1></a>
+      <p class="lead">
+      {{ .Site.Params.description }}
+      </p>
+      <div class="social-links">
+        <a href="https://github.com/yanlipnican">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://twitter.com/concreter_sk">
+          <i class="fa fa-twitter-square" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/jan-lipni%C4%8Dan-1991a413a/">
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="{{ .Site.BaseURL }}">Home</a> </li>
+      {{ range .Site.Menus.main -}}
+        <li><a href="{{.URL}}"> {{ .Name }} </a></li>
+      {{- end }}
+    </ul>
+
+    <p>{{ with .Site.Params.copyright }}{{.}}{{ else }}&copy; {{ now.Format "2006"}}. All rights reserved. {{end}}</p>
+  </div>
+</div>
